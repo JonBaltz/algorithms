@@ -3,20 +3,24 @@
 
 const cycleStats = function (numOfNodes, cycleStartIndex, hareSpeed) {
 	let first = null;
-	for (let i = 0; i < 2 * numOfNodes; i++) {
+	// This can be altered to make full lists of both paths but was removed for speedier testing of assumptions.
+	for (let i = 1; i < 2 * numOfNodes; i++) {
 		const currHare = Math.min(((hareSpeed * i) % numOfNodes) + cycleStartIndex, hareSpeed * i);
 		const currTort = Math.min((i % numOfNodes) + cycleStartIndex, i);
-		if (currHare === currTort && !first) {
-			first = i;
+		if (currHare === currTort) {
+			return i;
 		}
+		// if (currHare === currTort && !first) {
+		// 	first = i;
+		// }
 	}
-	return first;
+	// return first;
 }
 
 // Assumption: If the entire linked list is a cycle, and the speed is 2 the pointers will meet at the first node.
 // Assumption2: If the speed is greater than 2, the cycle will be found at the same index or earlier than if the speed was 2.
 // for (let i = 1; i < 1000; i++) {
-// 	console.assert(cycleStats(i, 0, 2) === i, "assumption is true", i);
+// 	console.assert(cycleStats(i, 0, 2) === i, "assumption is true", i, cycleStats(i, 0, 2));
 // 	console.assert(cycleStats(i, 0, 3) <= i, "higher speed is equal or faster", i);
 // }
 
