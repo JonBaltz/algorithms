@@ -1,3 +1,6 @@
+// This file was used to test the number of steps needed to determine is a linked list has a cycle.
+// The max steps were calculated with a variety of lengths, start-indecies, and speeds to create a general conclusion on the number of steps needed.
+
 const cycleStats = function (numOfNodes, cycleStartIndex, hareSpeed) {
 	let first = null;
 	for (let i = 0; i < 2 * numOfNodes; i++) {
