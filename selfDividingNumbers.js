@@ -1,3 +1,5 @@
+//https://leetcode.com/problems/self-dividing-numbers/
+
 const selfDividingNumbers = function (left, right) {
   const helper = function (digits, num) {
     const numArray = digits.split("");

@@ -1,4 +1,5 @@
 // In a given array of length 2N, there are N+1 unique elements, and one of these elements is repeated N times. Find that element.
+//https://leetcode.com/problems/n-repeated-element-in-size-2n-array/
 
 const repeatedNTimes = function (array) {
 	const seen = {};

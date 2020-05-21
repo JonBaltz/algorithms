@@ -1,3 +1,5 @@
+//https://leetcode.com/problems/merge-two-binary-trees/
+
 const mergeTrees = function (t1, t2) {
   if (!t1) {
     return t2;
