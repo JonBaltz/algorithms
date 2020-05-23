@@ -1,6 +1,6 @@
 // Create a function which takes a value for the number of turns, and returns all possible sequences of moves that a single player can make in a game of rock paper scissors.
 
-const rockPaperScissors = function (turns = 3) {
+const rockPaperScissors = function(turns = 3) {
 	let result = [""];
 	for (let i = 0; i < turns; i++) {
 		const current = [];
