@@ -1,15 +1,14 @@
 const Stack = function() {
 	this.length = 0;
 	this.storage = [];
-	this.min = [];
-	this.minLength = 0;
+	this.minStorage = [];
 }
 
 Stack.prototype.push = function(value) {
 	this.length++;
 	this.storage.push(value);
-	if (this.min[this.minLength -1] >= value) {
-		this.min.push(value);
+	if (!this.minStorage[0] || this.minStorage[this.minStorage.length -1] >= value) {
+		this.minStorage.push(value);
 	}
 }
 
@@ -18,10 +17,11 @@ Stack.prototype.pop = function() {
 		return undefined;
 	}
 	this.length--;
-	if (this.min[this.minLength - 1] === this.storage[this.length - 1]) {
-		this.min.pop();
+	const item = this.storage.pop();
+	if (this.minStorage[this.minStorage.length - 1] === item) {
+		this.minStorage.pop();
 	}
-	return this.storage.pop();
+	return item;
 }
 
 Stack.prototype.size = function() {
@@ -29,14 +29,16 @@ Stack.prototype.size = function() {
 }
 
 Stack.prototype.min = function() {
-	return this.min[this.minLength - 1];
+	return this.minStorage[this.minStorage.length - 1];
 }
 
 const myStack = new Stack();
-myStack.push("1");
-myStack.push("2");
+console.assert(myStack.min() === undefined, "works with no min");
+myStack.push(1);
+console.assert(myStack.min() === 1, "works with one item", myStack.min());
+myStack.push(2);
 console.assert(myStack.size() === 2, "increments size correctly");
-console.assert(myStack.pop() === "2", "pops the last item");
+console.assert(myStack.pop() === 2, "pops the last item");
 console.assert(myStack.size() === 1, "decrements size correctly");
 myStack.pop();
 console.assert(myStack.pop() === undefined, "wont return an item popped from an empty array");

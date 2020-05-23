@@ -20,7 +20,6 @@ const numRookCaptures = function (board) {
 	}
 	for (let i = position.x + 1; i < 8; i++) {
 		if (board[position.y][i] === "p") {
-			console.log('here');
 			count++;
 			break;
 		} else if (board[position.y][i] === "B") {
@@ -28,8 +27,7 @@ const numRookCaptures = function (board) {
 		}
 	}
 	for (let i = position.x - 1; i > 0; i--) {
-		if (board[position.y][i] === "p") {
-			console.log('here');
+		if (board[position.y][i] === "p") {	
 			count++;
 			break;
 		} else if (board[position.y][i] === "B") {
@@ -37,8 +35,7 @@ const numRookCaptures = function (board) {
 		}
 	}
 	for (let i = position.y + 1; i < 8; i++) {
-		if (board[i][position.x] === "p") {
-			console.log('here');
+		if (board[i][position.x] === "p") {	
 			count++;
 			break;
 		} else if (board[i][position.x] === "B") {
@@ -46,8 +43,7 @@ const numRookCaptures = function (board) {
 		}
 	}
 	for (let i = position.y - 1; i > 0; i--) {
-		if (board[i][position.x] === "p") {
-			console.log('here');
+		if (board[i][position.x] === "p") {	
 			count++;
 			break;
 		} else if (board[i][position.x] === "B") {
