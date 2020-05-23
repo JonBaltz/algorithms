@@ -1,8 +1,3 @@
-const Node = function(value) {
-	this.value = value;
-	this.next = null;
-}
-
 const hasCycle = function(linkedList) {
 	let tort = linkedList;
 	let hare = linkedList;
@@ -14,6 +9,11 @@ const hasCycle = function(linkedList) {
 		}
 	}
 	return false;
+}
+
+const Node = function(value) {
+	this.value = value;
+	this.next = null;
 }
 
 const test = new Node(1);
