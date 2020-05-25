@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/reverse-linked-list/submissions/
+
 const reverseList = function(head){
 	if (!head || !head.next) {
 		return head;
