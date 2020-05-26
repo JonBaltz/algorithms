@@ -1,34 +1,13 @@
 // https://leetcode.com/problems/merge-two-sorted-lists/
 
 const mergeTwoLists = function(one, two) {
-	if (!one) {
-		return two;
-	} else if (!two) {
+	if (!one || !two) { return one || two; }
+	if (one.val < two.val) {
+		one.next = mergeTwoLists(one.next, two);
 		return one;
-	}
-	let res = one;
-	let op = one;
-	let tp = two;
-	if (two.val < one.val) {
-		tp = one;
-		op = two;
-		res = two;
-	}
-	while (true) {
-		if (op.next === null) {
-			op.next = tp;
-			return res;
-		} else if (tp === null) {
-			return res;
-		}
-		if (tp.val < op.next.val) {
-			let temp = tp.next;
-			tp.next = op.next;
-			op.next = tp;
-			tp = temp;
-		} else {
-			op = op.next;
-		}
+	} else {
+		two.next = mergeTwoLists(one, two.next);
+		return two;
 	}
 }
 
