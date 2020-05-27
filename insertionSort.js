@@ -1,8 +1,8 @@
-const insertionSort = function(array) {
+const insertionSort = function(array, comparator = compare) {
 	for (let i = 1; i < array.length; i++) {
-		if (array[i].value < array[i - 1].value) {
+		if (comparator(array[i - 1].value, array[i].value) > 0) {
 			for (let j = 0; j < i; j++) {
-				if (array[j].value > array[i].value) {
+				if (comparator(array[i].value, array[j].value) < 0) {
 					array.splice(j, 0, array[i]);
 					array.splice(i + 1, 1);
 					j = i;
@@ -11,6 +11,10 @@ const insertionSort = function(array) {
 		}
 	}
 	return array;
+}
+
+const compare = function(a, b) {
+	return a - b;
 }
 
 const testingTransform = function(array) {
