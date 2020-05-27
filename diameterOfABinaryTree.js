@@ -1,16 +1,14 @@
 // https://leetcode.com/problems/diameter-of-binary-tree/
 
 const diameterOfBinaryTree = function(root) {
-	let longest = 0;
+	if (!root) return 0;
 	const helper = function(node) {
-		if (!node) {
-			return 0;
-		}
-		let left = helper(node.left);
-		let right = helper(node.right);
-		longest = Math.max(longest, left + right);
-		return Math.max(left, right) + 1;
+		let left = node.left ? helper(node.left) : 0;
+		let right = node.right ? helper(node.right) : 0;
+		if (left + right > longest) longest = left + right;
+		return left > right ? left + 1 : right + 1;
 	}
+	let longest = 0;
 	helper(root);
 	return longest;
 }
