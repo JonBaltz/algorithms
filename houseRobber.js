@@ -1,17 +1,16 @@
 // https://leetcode.com/problems/house-robber/
 
 const rob = function(nums) {
-	let max = 0;
+	if (!nums || !nums.length) return 0;
+	if (nums.length === 1) return nums[0];
+	if (nums.length === 2) return Math.max(nums[0], nums[1]);
+	let previous = current = temp = 0;
 	for (let i = 0; i < nums.length; i++) {
-		let copy = nums.slice();
-		if (!i) {
-			copy.splice(0, 2);
-		} else {
-			copy.splice(i - 1, 3);
-		}
-		max = Math.max(rob(copy) + nums[i], max);
+		temp = previous;
+		previous = current;
+		current = Math.max(current, temp + nums[i]);
 	}
-	return max;
+	return current;
 }
 
 console.assert(rob([]) === 0, "works for a list of no numbers");
