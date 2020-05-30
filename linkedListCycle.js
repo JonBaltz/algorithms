@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/linked-list-cycle/
+
 const hasCycle = function(linkedList) {
 	let tort = linkedList;
 	let hare = linkedList;
