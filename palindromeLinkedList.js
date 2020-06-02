@@ -1,20 +1,45 @@
 // https://leetcode.com/problems/palindrome-linked-list/
 
 const isPalindrome = function(head) {
-	const items = [];
-	let p = head;
-	while (p !== null) {
-		items.push(p.val);
-		p = p.next;
-	}
-	f = 0;
-	b = items.length - 1;
-	while (f < b) {
-		if (items[f++] !== items[b--]) {
-			return false;
+	if (!head || !head.next) return true;
+	let mid = findMiddle(head);
+	mid.next = reverseList(mid.next);
+	let result = true;
+	let a = head;
+	let b = mid.next;
+	while (result && b) {
+		if (a.val !== b.val) {
+			result = false;
 		}
+		a = a.next;
+		b = b.next;
 	}
-	return true;
+	mid.next = reverseList(mid.next);
+	return result;
+}
+
+const findMiddle = function(head) {
+	let turt = head;
+	let hare = head;
+	while (hare.next && hare.next.next) {
+		turt = turt.next;
+		hare = hare.next.next;
+	}
+	return turt;
+}
+
+const reverseList = function(node) {
+	let a = node;
+	let b = node.next;
+	a.next = null;
+	let temp;
+	while (b) {
+		temp = b.next;
+		b.next = a;
+		a = b;
+		b = temp;
+	}
+	return a;
 }
 
 const ListNode = function(val) {
