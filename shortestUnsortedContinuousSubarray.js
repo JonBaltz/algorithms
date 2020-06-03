@@ -2,18 +2,19 @@
 
 const findUnsortedSubarray = function(nums) {
 	if (nums.length < 2) return 0;
-	let low, high, storage = nums[0];
-	for (let i = 0; i < nums.length - 1; i++) {
-		storage = Math.max(storage, nums[i]);
-		if (nums[i + 1] < storage) {
-			high = i + 1;
+	let low, high;
+	let fo = 0;
+	let ba = nums.length - 1;
+	let foSto = nums[fo];
+	let baSto = nums[ba];
+	while (fo < nums.length - 1) {
+		foSto = Math.max(foSto, nums[fo]);
+		baSto = Math.min(baSto, nums[ba]);
+		if (nums[++fo] < foSto) {
+			high = fo;
 		}
-	}
-	storage = nums[nums.length - 1];
-	for (let i = nums.length - 1; i > 0; i--) {
-		storage = Math.min(storage, nums[i]);
-		if (nums[i - 1] > storage) {
-			low = i - 1;
+		if (nums[--ba] > baSto) {
+			low = ba;
 		}
 	}
 	return high ? 1 + high - low : 0;
