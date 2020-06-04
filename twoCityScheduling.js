@@ -1,4 +1,4 @@
-// https://leetcode.com/explore/featured/card/june-leetcoding-challenge/539/week-1-june-1st-june-7th/3349/
+// https://leetcode.com/problems/two-city-scheduling/
 
 const twoCitySchedCost = function(costs) {
 	let lean = 0;
