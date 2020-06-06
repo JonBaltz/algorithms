@@ -7,13 +7,13 @@ const inorderTraversal = function(root) {
 	res.push(root.val);
 	if (root.right) res = res.concat(inorderTraversal(root.right));
 	return res;
-}
+};
 
 const TreeNode = function(val) {
 	this.val = val;
 	this.left = null;
 	this.right = null;
-}
+};
 
 const test = new TreeNode(1);
 console.assert(JSON.stringify(inorderTraversal(test)) === JSON.stringify([1]), "works for leaf nodes");

@@ -14,12 +14,12 @@ const reverseList = function(head){
 		next = next ? next.next : null;
 	}
 	return previous;
-}
+};
 
 const ListNode = function(val) {
 	this.val = val;
 	this.next = null;
-}
+};
 
 const test = new ListNode(1);
 const reversed = new ListNode(4);

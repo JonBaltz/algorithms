@@ -16,7 +16,7 @@ const isPalindrome = function(head) {
 	}
 	mid.next = reverseList(mid.next);
 	return result;
-}
+};
 
 const findMiddle = function(head) {
 	let turt = head;
@@ -26,7 +26,7 @@ const findMiddle = function(head) {
 		hare = hare.next.next;
 	}
 	return turt;
-}
+};
 
 const reverseList = function(node) {
 	let a = node;
@@ -40,12 +40,12 @@ const reverseList = function(node) {
 		b = temp;
 	}
 	return a;
-}
+};
 
 const ListNode = function(val) {
 	this.val = val;
 	this.next = null;
-}
+};
 
 const test = new ListNode(1);
 console.assert(isPalindrome(test) === true, "works for a single item");

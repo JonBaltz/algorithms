@@ -16,7 +16,7 @@ const dailyTemperatures = function(temps) {
 		nexts[temps[i]] = i;
 	}
 	return result;
-}
+};
 
 console.assert(JSON.stringify(dailyTemperatures([73, 74, 75, 71, 69, 72, 76, 73])) === JSON.stringify([1, 1, 4, 2, 1, 1, 0, 0]), "works for a complex example");
 console.assert(JSON.stringify(dailyTemperatures([70, 71, 72, 73, 74])) === JSON.stringify([1, 1, 1, 1, 0]), "works for possitive slope numbers");

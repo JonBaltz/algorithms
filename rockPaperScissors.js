@@ -12,7 +12,7 @@ const rockPaperScissors = function(turns = 3) {
 		result = current;
 	}
 	return result;
-}
+};
 
 const one = ["R", "P", "S"];
 const three = ["RRR", "RRP", "RRS", "RPR", "RPP", "RPS", "RSR", "RSP", "RSS", "PRR", "PRP", "PRS", "PPR", "PPP", "PPS", "PSR", "PSP", "PSS", "SRR", "SRP", "SRS", "SPR", "SPP", "SPS", "SSR", "SSP", "SSS"];

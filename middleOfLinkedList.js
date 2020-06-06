@@ -6,12 +6,12 @@ const findMiddle = function(head) {
 		hare=hare.next.next;
 	}
 	return turt;
-}
+};
 
 const ListNode = function(val) {
 	this.val = val;
 	this.next = null;
-}
+};
 
 const test = new ListNode(1);
 const two = new ListNode(2);

@@ -11,13 +11,13 @@ const diameterOfBinaryTree = function(root) {
 	let longest = 0;
 	helper(root);
 	return longest;
-}
+};
 
 const TreeNode = function(val) {
 	this.val = val;
 	this.left = null;
 	this.right = null;
-}
+};
 
 const test = new TreeNode(1);
 const two = new TreeNode(2);

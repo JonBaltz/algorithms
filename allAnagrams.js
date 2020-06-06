@@ -11,7 +11,7 @@ const allAnagrams = function(string) {
 	}
 	recurse(string, "");
 	return Object.keys(hash);
-}
+};
 
 console.assert(allAnagrams("abc").length === 6, "creates the correct number of anagrams");
 console.assert(JSON.stringify(allAnagrams("a")) === JSON.stringify(["a"]), "correctly creates all for a single letters");

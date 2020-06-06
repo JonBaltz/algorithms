@@ -3,29 +3,29 @@
 const MinStack = function() {
 	this.storage = [];
 	this.minStorage = [];
-}
+};
 
 MinStack.prototype.push = function(val) {
 	if (this.minStorage.length === 0 || val <= this.minStorage[this.minStorage.length - 1]) {
 		this.minStorage.push(val);
 	}
 	this.storage.push(val);
-}
+};
 
 MinStack.prototype.pop = function() {
 	if (this.minStorage[this.minStorage.length - 1] === this.storage[this.storage.length - 1]) {
 		this.minStorage.pop();
 	}
 	return this.storage.pop();
-}
+};
 
 MinStack.prototype.top = function() {
 	return this.storage[this.storage.length - 1];
-}
+};
 
 MinStack.prototype.getMin = function() {
 	return this.minStorage[this.minStorage.length - 1];
-}
+};
 
 const object = new MinStack();
 console.assert(object.top() === undefined, "a stack begins empty");

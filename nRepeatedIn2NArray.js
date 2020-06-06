@@ -9,7 +9,7 @@ const repeatedNTimes = function (array) {
 		}
 		seen[array[i]] = true;
 	}
-}
+};
 
 console.assert(repeatedNTimes([1, 2, 3, 3]) === 3, "works for simple example", repeatedNTimes([1, 2, 3, 3]));
 console.assert(repeatedNTimes([2, 1, 2, 5, 3, 2]) === 2, "finds correct element");

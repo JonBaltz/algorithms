@@ -14,6 +14,6 @@ const reconstructQueue = function(people) {
 		result.splice(people[i][1], 0, people[i]);
 	}
 	return result;
-}
+};
 
 console.assert(JSON.stringify(reconstructQueue([[7, 0], [4, 4], [7, 1], [5, 0], [6, 1], [5, 2]])) === JSON.stringify([[5, 0], [7, 0], [5, 2], [6, 1], [4, 4], [7, 1]]), "works for a large example", reconstructQueue([[7, 0], [4, 4], [7, 1], [5, 0], [6, 1], [5, 2]]));

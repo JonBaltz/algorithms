@@ -8,13 +8,13 @@ const invertTree = function(root) {
 	root.left = invertTree(root.right);
 	root.right = temp;
 	return root;
-}
+};
 
 const TreeNode = function(val) {
 	this.val = val;
 	this.left = null;
 	this.right = null;
-}
+};
 
 const tree = new TreeNode(1);
 const invertedTree = new TreeNode(1);

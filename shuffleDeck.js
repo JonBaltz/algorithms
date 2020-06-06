@@ -6,7 +6,7 @@ const shuffleDeck = function(deck) {
 		deck[i] = temp;
 	}
 	return deck;
-}
+};
 
 const orderedDeck = function() {
 	const suits = [ '♥', '♣', '♠', '♦' ];
@@ -14,7 +14,7 @@ const orderedDeck = function() {
 	const deck = [];
 	suits.forEach((suit) => values.forEach((value) => {deck.push(value + suit);}));
 	return deck;
-}
+};
 
 const deck = orderedDeck();
 console.log(deck);

@@ -19,7 +19,7 @@ const evenOccurrence = function(array) {
 		}
 	}
 	return first === null ? null: Number(array[first[1]]) || array[first[1]];
-}
+};
 
 console.assert(evenOccurrence([1, 1, 2, 3, 4, 5]) === 1, "works with a single even");
 console.assert(evenOccurrence([1, 1, 2, 2, 3, 3]) === 1, "works with multiple evens");

@@ -14,7 +14,7 @@ const makeChange = function(total, coins = coinArray) {
 		count += makeChange(curr, coins.slice(0, i + 1));
 	}
 	return count;
-}
+};
 
 console.assert(makeChange(1) === 1, "only one way to make a penny");
 console.assert(makeChange(4) === 3, "three ways to make four cents");

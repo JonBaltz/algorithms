@@ -17,7 +17,7 @@ const quickSort = function(array) {
 		}
 	}
 	return [].concat(quickSort(left), pivot, quickSort(right));
-}
+};
 
 const sorted = [1, 2, 3, 4, 5];
 console.assert(JSON.stringify(quickSort([5, 4, 3, 2, 1])) === JSON.stringify(sorted), "works for a backwards array");

@@ -12,7 +12,7 @@ const HashTable = function () {
 	this._storage = [];
 	this._size = 0;
 	this._limit = 4;
-}
+};
 
 HashTable.prototype._resize = function (change) {
 	this._limit *= change;
@@ -35,7 +35,7 @@ HashTable.prototype._resize = function (change) {
 			this._storage[index].push(items[i]);
 		}
 	}
-}
+};
 
 HashTable.prototype.insert = function (key, value) {
 	if (typeof key !== "string" && typeof key !== "number") {
@@ -57,7 +57,7 @@ HashTable.prototype.insert = function (key, value) {
 		}
 		this._storage[index].push([key, value]);
 	}
-}
+};
 
 HashTable.prototype.retrieve = function (key) {
 	if (typeof key !== "string" && typeof key !== "number") {
@@ -72,7 +72,7 @@ HashTable.prototype.retrieve = function (key) {
 		}
 	}
 	return undefined;
-}
+};
 
 HashTable.prototype.remove = function (key) {
 	if (typeof key !== "string" && typeof key !== "number") {
@@ -91,7 +91,7 @@ HashTable.prototype.remove = function (key) {
 		}
 	}
 	this._size++;
-}
+};
 
 const myTable = new HashTable();
 myTable.insert("jon", 20);

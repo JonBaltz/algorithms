@@ -11,12 +11,12 @@ const hasCycle = function(linkedList) {
 		}
 	}
 	return false;
-}
+};
 
 const Node = function(value) {
 	this.value = value;
 	this.next = null;
-}
+};
 
 const test = new Node(1);
 const two = new Node(2);

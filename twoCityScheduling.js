@@ -24,7 +24,7 @@ const twoCitySchedCost = function(costs) {
 		}
 	}
 	return cost;
-}
+};
 
 console.assert(twoCitySchedCost([[10,20],[30,200],[400,50],[30,20]]) === 110, "works for a standard example");
 console.assert(twoCitySchedCost([[50, 100], [20, 75]]) === 120, "works for two people", twoCitySchedCost([[50, 100], [20, 75]]));

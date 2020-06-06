@@ -2,11 +2,11 @@
 
 const Board = function () {
 	this.board = [[".", ".", ".", ".", ".", ".", ".", "."], [".", ".", ".", ".", ".", ".", ".", "."], [".", ".", ".", ".", ".", ".", ".", "."], [".", ".", ".", ".", ".", ".", ".", "."], [".", ".", ".", ".", ".", ".", ".", "."], [".", ".", ".", ".", ".", ".", ".", "."], [".", ".", ".", ".", ".", ".", ".", "."], [".", ".", ".", ".", ".", ".", ".", "."]];
-}
+};
 
 Board.prototype.addChar = function (x, y, char) {
 	this.board[y][x] = char;
-}
+};
 
 const numRookCaptures = function (board) {
 	let position;
@@ -51,7 +51,7 @@ const numRookCaptures = function (board) {
 		}
 	}
 	return count;
-}
+};
 
 const test = new Board();
 test.addChar(1, 3, "p");

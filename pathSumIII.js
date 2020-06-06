@@ -18,13 +18,13 @@ const pathSum = function(root, sum) {
 		return count;
 	}
 	return helper(root, []);
-}
+};
 
 const TreeNode = function(val) {
 	this.val = val;
 	this.left = null;
 	this.right = null;
-}
+};
 
 const test = new TreeNode(10);
 const l = new TreeNode(5);

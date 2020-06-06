@@ -12,7 +12,7 @@ const fib = function(n) {
 		y = next;
 	}
 	return y;
-}
+};
 
 console.assert(fib(0) === 0, "works for 0");
 console.assert(fib(1) === 1, "works for 1");

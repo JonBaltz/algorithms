@@ -7,7 +7,7 @@ const isPalindrome = function(array) {
 		}
 	}
 	return true;
-}
+};
 
 console.assert(isPalindrome([1, 2, 3]) === false, "finds a non-palindrome");
 console.assert(isPalindrome([1, 2, 3, 3, 2, 1]) === true, "finds an even palindrome");

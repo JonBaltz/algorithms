@@ -35,4 +35,4 @@ const getIntersectionNode = function(one, two) {
 		o = o.next;
 		t = t.next;
 	}
-}
+};

@@ -15,7 +15,7 @@ const cycleStats = function (numOfNodes, cycleStartIndex, hareSpeed) {
 		// }
 	}
 	// return first;
-}
+};
 
 // Assumption: If the entire linked list is a cycle, and the speed is 2 the pointers will meet at the first node.
 // Assumption2: If the speed is greater than 2, the cycle will be found at the same index or earlier than if the speed was 2.
@@ -49,12 +49,12 @@ const cycleStats = function (numOfNodes, cycleStartIndex, hareSpeed) {
 // 		}
 // 	}
 // 	return false;
-// }
+// };
 
 // const Node = function (value) {
 // 	this.value = value;
 // 	this.next = null;
-// }
+// };
 
 // const test = new Node(1);
 // const two = new Node(2);

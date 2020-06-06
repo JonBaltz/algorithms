@@ -2,7 +2,7 @@ const Stack = function() {
 	this.length = 0;
 	this.storage = [];
 	this.minStorage = [];
-}
+};
 
 Stack.prototype.push = function(value) {
 	this.length++;
@@ -10,7 +10,7 @@ Stack.prototype.push = function(value) {
 	if (!this.minStorage[0] || this.minStorage[this.minStorage.length -1] >= value) {
 		this.minStorage.push(value);
 	}
-}
+};
 
 Stack.prototype.pop = function() {
 	if (this.length === 0) {
@@ -22,15 +22,15 @@ Stack.prototype.pop = function() {
 		this.minStorage.pop();
 	}
 	return item;
-}
+};
 
 Stack.prototype.size = function() {
 	return this.length;
-}
+};
 
 Stack.prototype.min = function() {
 	return this.minStorage[this.minStorage.length - 1];
-}
+};
 
 const myStack = new Stack();
 console.assert(myStack.min() === undefined, "works with no min");

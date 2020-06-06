@@ -25,7 +25,7 @@ const isValid = function(str) {
 		}
 	}
 	return storage.length ? false : true;
-}
+};
 
 console.assert(isValid("(){}[]") === true, "works for non-nested sets");
 console.assert(isValid("[{()}]") === true, "works for a nested set");

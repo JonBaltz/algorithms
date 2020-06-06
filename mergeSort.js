@@ -10,7 +10,7 @@ const mergeSort = function(array) {
 		array = newArray;
 	}
 	return array[0];
-}
+};
 
 const merge = function(one, two) {
 	if (!two) {
@@ -38,7 +38,7 @@ const merge = function(one, two) {
 		}
 	}
 	return merged;
-}
+};
 
 console.assert(JSON.stringify(mergeSort([1, 2, 3, 4, 5])) === JSON.stringify([1, 2, 3, 4, 5]), "wont change a sorted array", mergeSort([1, 2, 3, 4, 5]));
 console.assert(JSON.stringify(mergeSort([5, 4, 3, 2, 1])) === JSON.stringify([1, 2, 3, 4, 5]), "works for a reversed arrray", mergeSort([5, 4, 3, 2, 1]));

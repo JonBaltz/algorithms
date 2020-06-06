@@ -9,12 +9,12 @@ const mergeTwoLists = function(one, two) {
 		two.next = mergeTwoLists(one, two.next);
 		return two;
 	}
-}
+};
 
 const ListNode = function(val) {
 	this.val = val;
 	this.next = null;
-}
+};
 
 const odds = new ListNode(1);
 odds.next = new ListNode(3);

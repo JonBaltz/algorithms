@@ -18,7 +18,7 @@ const findUnsortedSubarray = function(nums) {
 		}
 	}
 	return high ? 1 + high - low : 0;
-}
+};
 
 console.assert(findUnsortedSubarray([1, 2, 3, 4, 5]) === 0, "nothing to sort in a sorted array");
 console.assert(findUnsortedSubarray([1]) === 0, "won't need to sort a single item");

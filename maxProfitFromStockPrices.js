@@ -8,7 +8,7 @@ const maxProfit = function(prices) {
 		greatest = Math.max(greatest, prices[i] - lowest);
 	}
 	return greatest;
-}
+};
 
 console.assert(maxProfit([7, 1, 5, 3, 4, 6]) === 5, "works for a single purchase and sell");
 console.assert(maxProfit([7, 6, 5, 4, 3, 2, 1]) === 0, "works for no profit possible");

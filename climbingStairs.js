@@ -6,7 +6,7 @@ const climbStairs = function(n) {
 		ans = [ans[1], ans[1] + ans[0]];
 	}
 	return ans[1];
-}
+};
 
 console.assert(climbStairs(-1000) === 1, "handles negative numbers");
 console.assert(climbStairs(2) === 2, "works for a base case", climbStairs(2));

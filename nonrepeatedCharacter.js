@@ -14,7 +14,7 @@ const firstNonRepeatedCharacter = function(string) {
 		}
 	}
 	return first !== null ? string[first] : first;
-}
+};
 
 console.assert(firstNonRepeatedCharacter("aabcac") === "b", "works for a single non-repeated item");
 console.assert(firstNonRepeatedCharacter("aabccd") === "b", "works for multiple non-repeated chars");

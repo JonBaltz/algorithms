@@ -3,13 +3,13 @@
 
 const maxDepth = function(root) {
 	return root ? 1 + Math.max(maxDepth(root.left), maxDepth(root.right)) : 0;
-}
+};
 
 const TreeNode = function(val) {
 	this.val = val;
 	this.left = null;
 	this.rigth = null;
-}
+};
 
 console.assert(maxDepth(null) === 0, "works for a null node");
 const test = new TreeNode(1);

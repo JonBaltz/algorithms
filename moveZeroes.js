@@ -15,7 +15,7 @@ const moveZeroes = function(nums) {
 		}
 	}
 	return nums;
-}
+};
 
 console.assert(JSON.stringify(moveZeroes([1])) === JSON.stringify([1]), "works for a single item");
 console.assert(JSON.stringify(moveZeroes([1, 2, 3, 0, 0])) === JSON.stringify([1, 2, 3, 0, 0]), "works for an array that already works");

@@ -26,7 +26,7 @@ const findDisappearedNumbers = function(array) {
 	}
 	array.length = index;
 	return array;
-}
+};
 
 console.assert(JSON.stringify(findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1])) === JSON.stringify([5, 6]), "works", findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1]));
 console.assert(JSON.stringify(findDisappearedNumbers([1])) === JSON.stringify([]), "works for an array with no disappeared");

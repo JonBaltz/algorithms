@@ -24,7 +24,7 @@ const telephoneWords = function(digitString) {
 		result = current;
 	}
 	return result;
-}
+};
 
 console.assert(telephoneWords("1111").length === 1, "works for  single letter digits");
 console.assert(telephoneWords("3").length === 3, "works for a single digit");

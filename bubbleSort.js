@@ -16,7 +16,7 @@ const bubbleSort = function(array) {
 		end--;
 	}
 	return array;
-}
+};
 
 console.assert(JSON.stringify(bubbleSort([3, 1, 2])) === JSON.stringify([1, 2, 3]), "works with a small array");
 const sorted = [1, 2, 3, 4, 5];

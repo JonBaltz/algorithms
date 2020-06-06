@@ -12,7 +12,7 @@ const countBits = function(n) {
 		}
 	}
 	return dp;
-}
+};
 
 console.assert(JSON.stringify(countBits(2)) === JSON.stringify([0, 1, 1]), "works for an n of two", countBits(2));
 console.assert(JSON.stringify(countBits(5)) === JSON.stringify([0, 1, 1, 2, 1, 2]), "works for an n of five", countBits(5));

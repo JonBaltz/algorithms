@@ -16,12 +16,12 @@ const isSymmetric = function(root) {
 	} else {
 		return false;
 	}
-}
+};
 
 const TreeNode = function(val) {
 	this.val = val;
 	this.left = this.right = null;
-}
+};
 
 console.assert(isSymmetric(null) === true, "an empty tree is symmetric");
 const test = new TreeNode(1);

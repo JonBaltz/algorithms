@@ -12,7 +12,7 @@ const majorityElement = function(nums) {
 		}
 	}
 	return element;
-}
+};
 
 console.assert(majorityElement([1]) === 1, "works for a single item");
 console.assert(majorityElement([3, 2, 3]) === 3, "works for size 3 array");

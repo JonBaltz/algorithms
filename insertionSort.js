@@ -11,11 +11,11 @@ const insertionSort = function(array, comparator = compare) {
 		}
 	}
 	return array;
-}
+};
 
 const compare = function(a, b) {
 	return a - b;
-}
+};
 
 const testingTransform = function(array) {
 	const transformed = [];
@@ -23,7 +23,7 @@ const testingTransform = function(array) {
 		transformed.push({value: array[i], i});
 	}
 	return transformed;
-}
+};
 
 console.log(insertionSort(testingTransform([1, 2, 3, 4])));
 console.log(insertionSort(testingTransform([3, 2, 1])));

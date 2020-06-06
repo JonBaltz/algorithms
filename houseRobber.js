@@ -11,7 +11,7 @@ const rob = function(nums) {
 		current = Math.max(current, temp + nums[i]);
 	}
 	return current;
-}
+};
 
 console.assert(rob([]) === 0, "works for a list of no numbers");
 console.assert(rob([1]) === 1, "works for a single number");
