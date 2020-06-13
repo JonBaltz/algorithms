@@ -1,7 +1,11 @@
 const deepEquals = function(apple, orange) {
 	if (typeof apple === "object" && typeof orange === "object") {
+		if (Array.isArray(apple) !== Array.isArray(orange)) return false;
 		if (Array.isArray(apple) && Array.isArray(orange)) {
-			return JSON.stringify(apple) === JSON.stringify(orange);
+			for (let i = 0; i < apple.length; i++) {
+				if (!deepEquals(apple[i], orange[i])) return false;
+			}
+			return apple.length === orange.length;
 		}
 		let ak = Object.keys(apple);
 		let ok = Object.keys(orange);
