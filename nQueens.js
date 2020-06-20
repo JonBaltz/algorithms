@@ -26,6 +26,7 @@ const nQueens = function(n) {
 	return recurse(board, 0, 0, 0);
 };
 
+console.assert(nQueens(0) === 1, "one solution for a board of zero");
 console.assert(nQueens(1) === 1, "works for n = 1");
 console.assert(nQueens(2) === 0, "works for n = 2");
 console.assert(nQueens(4) === 2, "works for n = 4");
