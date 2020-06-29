@@ -5,7 +5,7 @@ const commonChars = function(str1, str2) {
 			valid[str2[i]] = 1;
 		}
 	}
-	const extras = Array.prototype.slice.call( arguments, 2);
+	const extras = Array.prototype.slice.call(arguments, 2);
 	for (let i = 0; i < extras.length; i++) {
 		for (let j = 0; j < extras[i].length; j++) {
 			if (valid[extras[i][j]] === i + 1) {
