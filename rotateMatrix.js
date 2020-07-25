@@ -1,4 +1,4 @@
-const rotateMatrix = function (matrix) {
+const rotateMatrix = function (matrix, direction = 1) {
 	const rotated = [];
 	for (let i = 0; i < matrix[0].length; i++) {
 		rotated[i] = [];
@@ -8,7 +8,7 @@ const rotateMatrix = function (matrix) {
 			rotated[j][matrix.length - i - 1] = matrix[i][j];
 		}
 	}
-	return rotated;
+	return direction >= 0 ? rotated : rotateMatrix(rotateMatrix(rotated));
 };
 
 console.assert(JSON.stringify(rotateMatrix([[1]])) === JSON.stringify([[1]]), "works for a single row and column");
