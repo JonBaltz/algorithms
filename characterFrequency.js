@@ -9,13 +9,15 @@ const characterFrequency = function (str) {
 	}
 	const result = Object.entries(counts);
 	result.sort((a, b) => {
+		if (b[1] - a[1]) {
+			return b[1] - a[1];
+		}
 		if (a[0] > b[0]) {
 			return 1;
 		} else {
 			return -1;
 		}
 	});
-	result.sort((a, b) => b[1] - a[1]);
 	return result;
 };
 
