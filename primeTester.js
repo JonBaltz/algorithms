@@ -12,7 +12,24 @@ const primeTester = function (n) {
 };
 
 const primeSieve = function (start, end) {
-	//
+	const array = [false, false];
+	for (let i = 2; i <= end; i++) {
+		array[i] = true;
+	}
+	for (let i = 2; i < Math.sqrt(end); i++) {
+		if (array[i]) {
+			for (let j = Math.pow(i, 2); j <= end; j += i) {
+				array[j] = false;
+			}
+		}
+	}
+	const result = [];
+	for (let i = start; i <= end; i++) {
+		if (array[i]) {
+			result.push(i);
+		}
+	}
+	return result;
 };
 
 console.assert(primeTester(5) === true, "5");
@@ -25,3 +42,6 @@ console.assert(primeTester(2971215073) === true);
 console.assert(primeTester(2971215073 * 2971215073) === false);
 console.assert(primeTester(70368760954879) === true);
 console.assert(primeTester(70368760954879 - 1) === false);
+
+console.log(primeSieve(0, 100));
+console.log(primeSieve(100, 1000));
