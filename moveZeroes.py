@@ -5,8 +5,8 @@ class Solution:
 		dex = 0
 		for i, val in enumerate(nums):
 			if val != 0:
-				nums[dex] = val
 				nums[i] = 0
+				nums[dex] = val
 				dex += 1
 		print(nums)
 
