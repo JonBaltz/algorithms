@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/linked-list-random-node/
+
 const RandomList = function(head = null) {
 	this.head = head;
 	this.length = 0;
