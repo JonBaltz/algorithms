@@ -1,7 +1,7 @@
+from collections import Counter
+
 def isUnique(str):
-	counter = {}
-	for letter in str:
-		counter[letter] = counter.get(letter, 0) + 1
+	counter = Counter(str)
 
 	for count in counter.values():
 		if count > 1: return False
