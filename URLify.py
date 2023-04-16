@@ -1,5 +1,5 @@
 def URLify(str):
-	return "%20".join(str.split(" "))
+	return str.replace(" ", "%20")
 
 print(URLify("Jon Baltz"))
 print(URLify("Wild West Cowboy"))
